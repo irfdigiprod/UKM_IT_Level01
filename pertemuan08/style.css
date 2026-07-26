@@ -7,29 +7,28 @@
 /* ==========================================================================
    MATERI PERTEMUAN 5: CSS RESET & SELEKTOR DASAR
    ========================================================================== */
+/* Impor Google Font: Plus Jakarta Sans */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 /* Selektor Universal: Reset margin & padding bawaan browser */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Model Box: Lebar total mencakup padding/border */
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* ==========================================================================
    MATERI PERTEMUAN 6: TIPOGRAFI & SISTEM PEWARNAAN
    ========================================================================== */
 
-/* Impor Google Font: Plus Jakarta Sans */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
 /* Deklarasi Variabel CSS Global (Warna Identitas Brand Pesantren) */
 :root {
-  --primary: #602515;       /* Maroon */
-  --secondary: #f8ae19;     /* Emas */
-  --bg-primary: #fdfbf7;    /* Warm Cream */
-  --text-primary: #2a1a16;  /* Gelap */
-  --text-secondary: #6e5650;/* Pendukung */
+  --primary: #602515; /* Maroon */
+  --secondary: #f8ae19; /* Emas */
+  --bg-primary: #fdfbf7; /* Warm Cream */
+  --text-primary: #2a1a16; /* Gelap */
+  --text-secondary: #6e5650; /* Pendukung */
   --border-color: rgba(96, 37, 21, 0.08);
 }
 
@@ -37,7 +36,7 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.6;
 }
 
@@ -68,7 +67,6 @@ p {
   margin-bottom: 15px;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 7: CSS BOX MODEL & BUTTON STYLING
    ========================================================================== */
@@ -80,18 +78,18 @@ p {
 
 /* Kustomisasi Komponen Tombol (Display Inline-Block & Spasiasi Box Model) */
 .btn {
-  display: inline-flex;  /* Inline-block agar bisa ditata lebar/padding-nya */
+  display: inline-flex; /* Inline-block agar bisa ditata lebar/padding-nya */
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;    /* Padding atas-bawah 12px, kiri-kanan 28px */
-  border-radius: 50px;   /* Sisi bulat penuh */
+  padding: 12px 28px; /* Padding atas-bawah 12px, kiri-kanan 28px */
+  border-radius: 50px; /* Sisi bulat penuh */
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
   text-decoration: none;
   border: 2px solid transparent;
   gap: 8px;
-  
+
   /* Efek Transisi Halus (Pertemuan 7) */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -126,7 +124,6 @@ p {
   box-shadow: 0 5px 15px rgba(248, 174, 25, 0.3);
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 8: FLEXBOX LAYOUTING (NAVBAR & FOOTER)
    ========================================================================== */
@@ -147,7 +144,7 @@ p {
   width: 100%;
   z-index: 1000;
   background-color: rgba(253, 251, 247, 0.85); /* Krem transparan */
-  backdrop-filter: blur(12px);                 /* Efek blur kaca */
+  backdrop-filter: blur(12px); /* Efek blur kaca */
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(96, 37, 21, 0.06);
 }

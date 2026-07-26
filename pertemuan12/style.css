@@ -7,50 +7,52 @@
 /* ==========================================================================
    MATERI PERTEMUAN 5: CSS RESET & SELEKTOR DASAR
    ========================================================================== */
+/* Impor Google Font: Plus Jakarta Sans */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 /* Selektor Universal: Reset margin & padding bawaan browser */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Model Box: Lebar total mencakup padding/border */
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  
+  font-family: "Plus Jakarta Sans", sans-serif;
+
   /* Transisi Halus Perpindahan Tema */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* ==========================================================================
    MATERI PERTEMUAN 6: TIPOGRAFI & SISTEM PEWARNAAN
    ========================================================================== */
 
-/* Impor Google Font: Plus Jakarta Sans */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
 /* Deklarasi Variabel CSS Global - MODE TERANG (Default) */
 :root {
-  --primary: #602515;       /* Maroon */
-  --secondary: #f8ae19;     /* Emas */
-  
-  --bg-primary: #fdfbf7;    /* Latar Krem Lembut */
-  --bg-secondary: #f4efea;  /* Latar Krem Gelap */
-  --bg-card: #ffffff;       /* Latar kartu putih */
-  
-  --text-primary: #2a1a16;  /* Teks utama cokelat-hitam pekat */
-  --text-secondary: #6e5650;/* Teks pendukung abu-cokelat */
-  
+  --primary: #602515; /* Maroon */
+  --secondary: #f8ae19; /* Emas */
+
+  --bg-primary: #fdfbf7; /* Latar Krem Lembut */
+  --bg-secondary: #f4efea; /* Latar Krem Gelap */
+  --bg-card: #ffffff; /* Latar kartu putih */
+
+  --text-primary: #2a1a16; /* Teks utama cokelat-hitam pekat */
+  --text-secondary: #6e5650; /* Teks pendukung abu-cokelat */
+
   --border-color: rgba(96, 37, 21, 0.08);
   --shadow-md: 0 10px 30px rgba(96, 37, 21, 0.06);
 }
 
 /* Deklarasi Variabel CSS Global - MODE GELAP */
 [data-theme="dark"] {
-  --bg-primary: #120907;    /* Latar Cokelat Gelap Pekat */
-  --bg-secondary: #1a0e0b;  /* Latar Cokelat Gelap Medium */
-  --bg-card: #1f120e;       /* Latar kartu cokelat gelap */
-  
-  --text-primary: #fdfbf7;  /* Teks utama menjadi krem lembut */
-  --text-secondary: #cbbab6;/* Teks pendukung abu-abu terang */
-  
+  --bg-primary: #120907; /* Latar Cokelat Gelap Pekat */
+  --bg-secondary: #1a0e0b; /* Latar Cokelat Gelap Medium */
+  --bg-card: #1f120e; /* Latar kartu cokelat gelap */
+
+  --text-primary: #fdfbf7; /* Teks utama menjadi krem lembut */
+  --text-secondary: #cbbab6; /* Teks pendukung abu-abu terang */
+
   --border-color: rgba(248, 174, 25, 0.15); /* Border emas transparan */
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
@@ -59,7 +61,7 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.6;
 }
 
@@ -103,7 +105,6 @@ p {
   margin-bottom: 15px;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 7: CSS BOX MODEL & BUTTON STYLING
    ========================================================================== */
@@ -126,7 +127,7 @@ p {
   text-decoration: none;
   border: 2px solid transparent;
   gap: 8px;
-  
+
   /* Efek Transisi Halus */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -156,7 +157,6 @@ p {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(248, 174, 25, 0.3);
 }
-
 
 /* ==========================================================================
    MATERI PERTEMUAN 8: FLEXBOX LAYOUTING (NAVBAR & FOOTER)
@@ -314,7 +314,6 @@ p {
   color: #8c7873;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 9: GRID LAYOUTING (CARD PROGRAM & FASILITAS)
    ========================================================================== */
@@ -397,7 +396,6 @@ p {
   font-size: 0.9rem;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 10: CSS VARIABLES & PENERAPAN MODE GELAP/TERANG
    ========================================================================== */
@@ -443,7 +441,6 @@ p {
   display: block;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 11: ANIMASI TRANSISI & TRANSFORMASI CSS
    ========================================================================== */
@@ -466,9 +463,11 @@ p {
 
 /* Kerangka Dasar Scroll Reveal (Diaktifkan kembali dengan menyembunyikannya secara default di Pertemuan 12) */
 .reveal-element {
-  opacity: 0;                   /* Disembunyikan sebelum scroll */
-  transform: translateY(30px);  /* Digeser ke bawah sebelum scroll */
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0; /* Disembunyikan sebelum scroll */
+  transform: translateY(30px); /* Digeser ke bawah sebelum scroll */
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 /* Kondisi Aktif setelah kelas 'active' disematkan oleh JavaScript */

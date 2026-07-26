@@ -1,0 +1,348 @@
+/* ==========================================================================
+   ==========================================================================
+   CSS STYLESHEET - PROGRESSIVE CODEBASE
+   ==========================================================================
+   ========================================================================== */
+
+/* ==========================================================================
+   MATERI PERTEMUAN 5: CSS RESET & SELEKTOR DASAR
+   ========================================================================== */
+
+/* Selektor Universal: Reset margin & padding bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Model Box: Lebar total mencakup padding/border */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================================
+   MATERI PERTEMUAN 6: TIPOGRAFI & SISTEM PEWARNAAN
+   ========================================================================== */
+
+/* Impor Google Font: Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Deklarasi Variabel CSS Global (Warna Identitas Brand Pesantren) */
+:root {
+  --primary: #602515;       /* Maroon */
+  --secondary: #f8ae19;     /* Emas */
+  --bg-primary: #fdfbf7;    /* Warm Cream */
+  --text-primary: #2a1a16;  /* Gelap */
+  --text-secondary: #6e5650;/* Pendukung */
+  --border-color: rgba(96, 37, 21, 0.08);
+}
+
+/* Dasar Teks Halaman */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Penerapan Warna pada Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 7: CSS BOX MODEL & BUTTON STYLING
+   ========================================================================== */
+
+/* Kelas Pembatas Jarak Antar Section Halaman (Box Model: Margin/Padding) */
+.section-padding {
+  padding: 80px 0; /* Padding atas & bawah 80px untuk memberi ruang bernapas */
+}
+
+/* Kustomisasi Komponen Tombol (Display Inline-Block & Spasiasi Box Model) */
+.btn {
+  display: inline-flex;  /* Inline-block agar bisa ditata lebar/padding-nya */
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;    /* Padding atas-bawah 12px, kiri-kanan 28px */
+  border-radius: 50px;   /* Sisi bulat penuh */
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  gap: 8px;
+  
+  /* Efek Transisi Halus (Pertemuan 7) */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modifikator Tombol Utama (Solid Gold) */
+.btn-primary {
+  background-color: var(--secondary);
+  color: #120907;
+}
+
+/* Efek Hover Tombol Utama (Membesar & Bayangan Lembut) */
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-2px); /* Geser ke atas 2px (efek membal) */
+  box-shadow: 0 5px 15px rgba(248, 174, 25, 0.3); /* Cahaya bayangan emas */
+}
+
+/* Modifikator Tombol Outline (Garis Tepian Emas) */
+.btn-outline {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background-color: transparent;
+}
+
+/* Efek Hover Tombol Outline */
+.btn-outline:hover {
+  background-color: var(--secondary);
+  color: #120907;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(248, 174, 25, 0.3);
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 8: FLEXBOX LAYOUTING (NAVBAR & FOOTER)
+   ========================================================================== */
+
+/* Kontainer pembatas lebar konten di tengah layar */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Sticky Header Glassmorphism (Melayang & Efek Kaca Blur) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(253, 251, 247, 0.85); /* Krem transparan */
+  backdrop-filter: blur(12px);                 /* Efek blur kaca */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(96, 37, 21, 0.06);
+}
+
+/* Tata Letak Navbar (Flexbox Horizontal) */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Kiri logo, kanan menu */
+  padding: 20px 0;
+}
+
+/* Desain Teks Logo */
+.logo {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.logo-name {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tata Letak Menu Tautan Navigasi (Flexbox Horizontal) */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 32px; /* Celah jarak antar link */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Tata Letak Footer (Flexbox Horizontal/Vertical Grid) */
+.footer {
+  background-color: #1a0e0b; /* Latar gelap premium */
+  color: #dfd4d2;
+  padding: 60px 0 30px;
+  border-top: 4px solid var(--secondary); /* Garis pembatas emas */
+}
+
+/* Gunakan Flexbox untuk menyusun blok footer secara horisontal */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap; /* Melipat baris jika layar sempit */
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1 1 300px; /* Lebar basis 300px, bisa tumbuh/menyusut */
+}
+
+.footer-brand p {
+  color: #b5a4a0;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+/* Penjajaran List Link Sosial Media (Flexbox) */
+.social-links {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #dfd4d2;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  color: var(--secondary);
+}
+
+.footer-links-wrapper {
+  flex: 1 1 200px;
+}
+
+.footer-links {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #b5a4a0;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--secondary);
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #8c7873;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../hero.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(96, 37, 21, 0.9) 0%,
+    rgba(18, 9, 7, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.hero-tag {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: #120907;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #dfd4d2;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}

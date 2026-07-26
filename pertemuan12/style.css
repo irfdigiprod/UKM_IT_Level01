@@ -1,0 +1,557 @@
+/* ==========================================================================
+   ==========================================================================
+   CSS STYLESHEET - PROGRESSIVE CODEBASE
+   ==========================================================================
+   ========================================================================== */
+
+/* ==========================================================================
+   MATERI PERTEMUAN 5: CSS RESET & SELEKTOR DASAR
+   ========================================================================== */
+
+/* Selektor Universal: Reset margin & padding bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Model Box: Lebar total mencakup padding/border */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Transisi Halus Perpindahan Tema */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ==========================================================================
+   MATERI PERTEMUAN 6: TIPOGRAFI & SISTEM PEWARNAAN
+   ========================================================================== */
+
+/* Impor Google Font: Plus Jakarta Sans */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Deklarasi Variabel CSS Global - MODE TERANG (Default) */
+:root {
+  --primary: #602515;       /* Maroon */
+  --secondary: #f8ae19;     /* Emas */
+  
+  --bg-primary: #fdfbf7;    /* Latar Krem Lembut */
+  --bg-secondary: #f4efea;  /* Latar Krem Gelap */
+  --bg-card: #ffffff;       /* Latar kartu putih */
+  
+  --text-primary: #2a1a16;  /* Teks utama cokelat-hitam pekat */
+  --text-secondary: #6e5650;/* Teks pendukung abu-cokelat */
+  
+  --border-color: rgba(96, 37, 21, 0.08);
+  --shadow-md: 0 10px 30px rgba(96, 37, 21, 0.06);
+}
+
+/* Deklarasi Variabel CSS Global - MODE GELAP */
+[data-theme="dark"] {
+  --bg-primary: #120907;    /* Latar Cokelat Gelap Pekat */
+  --bg-secondary: #1a0e0b;  /* Latar Cokelat Gelap Medium */
+  --bg-card: #1f120e;       /* Latar kartu cokelat gelap */
+  
+  --text-primary: #fdfbf7;  /* Teks utama menjadi krem lembut */
+  --text-secondary: #cbbab6;/* Teks pendukung abu-abu terang */
+  
+  --border-color: rgba(248, 174, 25, 0.15); /* Border emas transparan */
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Dasar Teks Halaman */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Penerapan Warna pada Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* Override warna judul utama di dark mode agar lebih kontras */
+[data-theme="dark"] h1 {
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] h2 {
+  color: var(--secondary); /* Judul H2 berwarna emas pada mode gelap */
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] h3 {
+  color: var(--secondary);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 7: CSS BOX MODEL & BUTTON STYLING
+   ========================================================================== */
+
+/* Kelas Pembatas Jarak Antar Section Halaman */
+.section-padding {
+  padding: 80px 0;
+}
+
+/* Kustomisasi Komponen Tombol */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  gap: 8px;
+  
+  /* Efek Transisi Halus */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: #120907;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(248, 174, 25, 0.3);
+}
+
+.btn-outline {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--secondary);
+  color: #120907;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(248, 174, 25, 0.3);
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 8: FLEXBOX LAYOUTING (NAVBAR & FOOTER)
+   ========================================================================== */
+
+/* Kontainer pembatas lebar konten */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Sticky Header Glassmorphism */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(96, 37, 21, 0.06);
+}
+
+/* Modifikasi border header di mode gelap */
+[data-theme="dark"] .header {
+  background-color: rgba(18, 9, 7, 0.85);
+  border-bottom: 1px solid rgba(248, 174, 25, 0.1);
+}
+
+/* Tata Letak Navbar (Flexbox) */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+[data-theme="dark"] .logo {
+  color: var(--text-primary);
+}
+
+.logo-name {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menu Tautan Navigasi (Flexbox) */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Tata Letak Footer (Flexbox) */
+.footer {
+  background-color: #1a0e0b;
+  color: #dfd4d2;
+  padding: 60px 0 30px;
+  border-top: 4px solid var(--secondary);
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1 1 300px;
+}
+
+.footer-brand p {
+  color: #b5a4a0;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #dfd4d2;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  color: var(--secondary);
+}
+
+.footer-links-wrapper {
+  flex: 1 1 200px;
+}
+
+.footer-links {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #b5a4a0;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--secondary);
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #8c7873;
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 9: GRID LAYOUTING (CARD PROGRAM & FASILITAS)
+   ========================================================================== */
+
+/* Grid Program Pendidikan */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.program-card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--secondary);
+}
+
+.program-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .program-card h4 {
+  color: var(--secondary);
+}
+
+.program-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Grid Fasilitas Pesantren */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.facility-card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+}
+
+.facility-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .facility-card h4 {
+  color: var(--secondary);
+}
+
+.facility-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 10: CSS VARIABLES & PENERAPAN MODE GELAP/TERANG
+   ========================================================================== */
+
+/* Pembungkus Aksi Menu di Navbar */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Kustomisasi Tombol Toggle Tema */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: var(--border-color);
+  font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(248, 174, 25, 0.2);
+  color: var(--secondary);
+}
+
+.theme-toggle .fa-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+  display: block;
+}
+
+
+/* ==========================================================================
+   MATERI PERTEMUAN 11: ANIMASI TRANSISI & TRANSFORMASI CSS
+   ========================================================================== */
+
+/* Definisi Keyframe Animasi Fade-In-Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Kerangka Dasar Scroll Reveal (Diaktifkan kembali dengan menyembunyikannya secara default di Pertemuan 12) */
+.reveal-element {
+  opacity: 0;                   /* Disembunyikan sebelum scroll */
+  transform: translateY(30px);  /* Digeser ke bawah sebelum scroll */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Kondisi Aktif setelah kelas 'active' disematkan oleh JavaScript */
+.reveal-element.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../hero.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(96, 37, 21, 0.9) 0%,
+    rgba(18, 9, 7, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(18, 9, 7, 0.95) 0%,
+    rgba(18, 9, 7, 0.9) 100%
+  );
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.hero-tag {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: #120907;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #dfd4d2;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}

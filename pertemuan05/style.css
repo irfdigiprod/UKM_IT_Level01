@@ -1,0 +1,42 @@
+/* ==========================================================================
+   CSS RESET & FONTS (PERTEMUAN 5)
+   ========================================================================== */
+
+/* Selektor Universal: Reset margin & padding bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Menjamin ukuran elemen akurat sesuai padding/border */
+}
+
+/* Selektor Elemen: Memberikan dasar tampilan halaman */
+body {
+  background-color: #fdfbf7; /* Warna dasar warm cream */
+  color: #2a1a16;            /* Warna teks abu gelap kehitaman */
+  font-family: sans-serif;   /* Huruf standar browser sebelum Google Font diimpor di Pertemuan 6 */
+  line-height: 1.6;
+}
+
+/* Selektor Kelas: Kustomisasi tombol dasar */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+/* Modifikator kelas tombol utama */
+.btn-primary {
+  background-color: #602515; /* Warna primer maroon sementara */
+  color: #ffffff;
+}
+
+/* Modifikator kelas tombol outline */
+.btn-outline {
+  border-color: #602515;
+  color: #602515;
+  background-color: transparent;
+}

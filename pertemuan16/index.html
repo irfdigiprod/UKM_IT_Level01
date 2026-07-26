@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website Resmi Pondok Pesantren Minhajul Haq. Lembaga pendidikan Islam terpadu, unggulan Tahfidz Al-Qur'an, Madrasah, dan Kajian Kitab Kuning."
+    />
+    <title>Pesantren Minhajul Haq - Membentuk Generasi Qur'ani & Unggul</title>
+
+    <!-- FontAwesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- --- HEADER & NAVBAR --- -->
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Logo -->
+          <a href="#beranda" class="logo" id="logoLink">
+            <div class="logo-icon">
+              <i class="fa-solid fa-mosque"></i>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Minhajul Haq</span>
+              <span class="logo-sub">Pondok Pesantren</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+            <li><a href="#profil" class="nav-link">Profil</a></li>
+            <li><a href="#program" class="nav-link">Program</a></li>
+            <li><a href="#fasilitas" class="nav-link">Fasilitas</a></li>
+            <li><a href="#kontak" class="nav-link">Kontak</a></li>
+          </ul>
+
+          <!-- Navigation Actions -->
+          <div class="nav-actions">
+            <!-- Dark Mode Toggle Button -->
+            <button
+              class="theme-toggle"
+              id="themeToggleBtn"
+              aria-label="Toggle Dark Mode"
+            >
+              <i class="fa-solid fa-moon"></i>
+              <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <!-- CTA Register Button -->
+            <button class="btn btn-primary nav-btn" id="openRegisterModalBtn">
+              Daftar Sekarang
+            </button>
+
+            <!-- Hamburger menu button for mobile -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- --- HERO SECTION --- -->
+    <section class="hero" id="beranda">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-tag">Penerimaan Santri Baru 2026/2027</span>
+          <h1 class="hero-title">
+            Membentuk Generasi <span class="text-gradient">Qur'ani</span>,
+            Berakhlak Mulia & Berprestasi
+          </h1>
+          <p class="hero-description">
+            Selamat datang di Pondok Pesantren Minhajul Haq. Pusat pendidikan
+            Islam modern terpadu yang memadukan keilmuan syar'i klasik, hafalan
+            Al-Qur'an 30 Juz, dan kurikulum pendidikan nasional formal.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" id="heroRegisterBtn">
+              Mulai Pendaftaran <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="#profil" class="btn btn-outline"
+              >Pelajari Profil <i class="fa-solid fa-book-open"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- PROFIL SECTION --- -->
+    <section class="section-padding" id="profil">
+      <div class="container">
+        <div class="section-title-wrapper reveal-element">
+          <span class="section-subtitle">Mengenal Kami</span>
+          <h2 class="section-title">Profil & Sambutan</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Image Representation -->
+          <div class="about-image-wrapper reveal-element">
+            <div class="about-image-bg"></div>
+            <div
+              class="about-image"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  var(--primary) 0%,
+                  var(--secondary) 100%
+                );
+                height: 400px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                padding: 30px;
+                text-align: center;
+              "
+            >
+              <div>
+                <i
+                  class="fa-solid fa-users-rectangle"
+                  style="
+                    font-size: 5rem;
+                    margin-bottom: 20px;
+                    color: var(--secondary);
+                  "
+                ></i>
+                <h3>Minhajul Haq</h3>
+                <p>
+                  Mendidik dengan Hati, Membimbing dengan Sunnah, Menggapai
+                  Ridha Ilahi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader Welcome Speech & Brief Intro -->
+          <div class="about-text reveal-element">
+            <h3>Mendidik Generasi Masa Depan</h3>
+            <p>
+              Pesantren Minhajul Haq didirikan dengan tekad mulia untuk mencetak
+              kader-kader da'i dan cendekiawan muslim yang beraqidah shahihah,
+              berakhlak karimah, serta memiliki kompetensi sains dan teknologi
+              yang mumpuni untuk menghadapi tantangan zaman.
+            </p>
+
+            <div class="leader-quote">
+              "Kami berkomitmen memberikan pendidikan komprehensif yang
+              menyeimbangkan kecerdasan intelektual, emosional, dan spiritual
+              santri berlandaskan nilai-nilai Al-Qur'an dan Sunnah."
+              <span class="leader-name"
+                >KH. Ahmad Baihaqi, Lc., M.A. (Pimpinan Pondok Pesantren)</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="vision-mission-cards reveal-element">
+          <div class="vision-card">
+            <h4>Visi Kami</h4>
+            <p>
+              Menjadi lembaga pendidikan Islam rujukan dalam melahirkan huffazh
+              Al-Qur'an yang alim, berintegritas, mandiri, dan berwawasan global
+              pada tahun 2030.
+            </p>
+          </div>
+          <div class="mission-card">
+            <h4>Misi Kami</h4>
+            <ul class="mission-list">
+              <li>
+                Menyelenggarakan program Tahfidzul Qur'an 30 Juz secara mutqin
+                dengan metode yang teruji.
+              </li>
+              <li>
+                Mengajarkan ilmu-ilmu syar'i dan bahasa Arab secara intensif
+                untuk memahami kitab-kitab ulama secara baik.
+              </li>
+              <li>
+                Mengintegrasikan kurikulum kepesantrenan dengan kurikulum
+                nasional Kemendikbudristek & Kemenag.
+              </li>
+              <li>
+                Membina kepemimpinan, kewirausahaan, dan keterampilan sosial
+                yang berlandaskan akhlak mulia.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- PROGRAM PENDIDIKAN --- -->
+    <section
+      class="section-padding"
+      id="program"
+      style="background-color: var(--bg-secondary)"
+    >
+      <div class="container">
+        <div class="section-title-wrapper reveal-element">
+          <span class="section-subtitle">Program Kami</span>
+          <h2 class="section-title">Program Pendidikan</h2>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="program-filter reveal-element">
+          <button class="filter-btn active" data-filter="all">
+            Semua Program
+          </button>
+          <button class="filter-btn" data-filter="formal">
+            Pendidikan Formal
+          </button>
+          <button class="filter-btn" data-filter="tahfidz">
+            Tahfidz & Diniyah
+          </button>
+        </div>
+
+        <!-- Program Card Grid -->
+        <div class="program-grid">
+          <!-- Card 1 -->
+          <div class="program-card reveal-element" data-category="formal">
+            <div class="program-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="program-body">
+              <span class="program-card-tag">Formal - Akreditasi A</span>
+              <h4 class="program-card-title">Madrasah Tsanawiyah (MTs)</h4>
+              <p class="program-card-text">
+                Jenjang pendidikan formal setingkat SMP selama 3 tahun dengan
+                kombinasi kurikulum Kemenag dan penambahan materi kepesantrenan
+                dasar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="program-card reveal-element" data-category="formal">
+            <div class="program-icon">
+              <i class="fa-solid fa-university"></i>
+            </div>
+            <div class="program-body">
+              <span class="program-card-tag">Formal - Akreditasi A</span>
+              <h4 class="program-card-title">Madrasah Aliyah (MA)</h4>
+              <p class="program-card-text">
+                Jenjang pendidikan formal setingkat SMA dengan peminatan
+                Keagamaan dan MIPA yang mempersiapkan santri melanjutkan kuliah
+                di dalam maupun luar negeri.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="program-card reveal-element" data-category="tahfidz">
+            <div class="program-icon">
+              <i class="fa-solid fa-book-quran"></i>
+            </div>
+            <div class="program-body">
+              <span class="program-card-tag">Program Unggulan</span>
+              <h4 class="program-card-title">Tahfidz Al-Qur'an Mutqin</h4>
+              <p class="program-card-text">
+                Program akselerasi menghafal Al-Qur'an 30 Juz secara mutqin
+                dengan bimbingan asatidzah bersanad dan metode muraja'ah harian
+                yang terstruktur.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="program-card reveal-element" data-category="tahfidz">
+            <div class="program-icon">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="program-body">
+              <span class="program-card-tag">Keagamaan</span>
+              <h4 class="program-card-title">Kajian Kitab Kuning</h4>
+              <p class="program-card-text">
+                Pembelajaran mendalam khazanah keislaman klasik (Fikih, Aqidah,
+                Akhlak, Nahwu, Sharaf, dan Hadits) menggunakan kitab-kitab
+                rujukan orisinal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="program-card reveal-element" data-category="tahfidz">
+            <div class="program-icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="program-body">
+              <span class="program-card-tag">Bahasa Asing</span>
+              <h4 class="program-card-title">Program Intensif Bahasa</h4>
+              <p class="program-card-text">
+                Bimbingan intensif penguasaan percakapan dan kepenulisan Bahasa
+                Arab serta Bahasa Inggris sebagai media komunikasi wajib harian
+                santri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- FACILITIES SECTION --- -->
+    <section class="section-padding" id="fasilitas">
+      <div class="container">
+        <div class="section-title-wrapper reveal-element">
+          <span class="section-subtitle">Sarana Prasarana</span>
+          <h2 class="section-title">Fasilitas Pesantren</h2>
+        </div>
+
+        <div class="facilities-grid">
+          <!-- Facility Card 1 -->
+          <div class="facility-card reveal-element">
+            <div class="facility-img-placeholder">
+              <i class="fa-solid fa-mosque"></i>
+            </div>
+            <div class="facility-info">
+              <h4 class="facility-title">Masjid Utama Jami'</h4>
+              <p class="facility-desc">
+                Masjid yang luas sebagai pusat ibadah wajib lima waktu
+                berjamaah, halaqah Qur'an, kajian kitab, dan pembinaan spiritual
+                santri.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility Card 2 -->
+          <div class="facility-card reveal-element">
+            <div class="facility-img-placeholder">
+              <i class="fa-solid fa-hotel"></i>
+            </div>
+            <div class="facility-info">
+              <h4 class="facility-title">Asrama Santri Representatif</h4>
+              <p class="facility-desc">
+                Gedung asrama bertingkat yang bersih, rapi, dan dilengkapi
+                dengan ranjang bertingkat, lemari pribadi, serta sirkulasi udara
+                yang baik.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility Card 3 -->
+          <div class="facility-card reveal-element">
+            <div class="facility-img-placeholder">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="facility-info">
+              <h4 class="facility-title">Laboratorium Komputer & Bahasa</h4>
+              <p class="facility-desc">
+                Fasilitas laboratorium modern ber-AC dengan koneksi internet
+                kencang untuk mendukung pembelajaran TIK, penelitian mandiri,
+                dan tes bahasa online.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility Card 4 -->
+          <div class="facility-card reveal-element">
+            <div class="facility-img-placeholder">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <div class="facility-info">
+              <h4 class="facility-title">Perpustakaan Digital & Fisik</h4>
+              <p class="facility-desc">
+                Koleksi ribuan buku referensi umum, keislaman, ensiklopedia,
+                kamus, kitab klasik, hingga akses perpustakaan digital e-book
+                pesantren.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility Card 5 -->
+          <div class="facility-card reveal-element">
+            <div class="facility-img-placeholder">
+              <i class="fa-solid fa-hospital-user"></i>
+            </div>
+            <div class="facility-info">
+              <h4 class="facility-title">
+                Pos Kesehatan Pesantren (Poskestren)
+              </h4>
+              <p class="facility-desc">
+                Klinik internal yang siaga 24 jam dengan ketersediaan
+                obat-obatan P3K dasar, dipandu oleh tenaga medis profesional
+                penanggung jawab.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility Card 6 -->
+          <div class="facility-card reveal-element">
+            <div class="facility-img-placeholder">
+              <i class="fa-solid fa-volleyball"></i>
+            </div>
+            <div class="facility-info">
+              <h4 class="facility-title">Lapangan Olahraga Luas</h4>
+              <p class="facility-desc">
+                Lapangan futsal, basket, bulutangkis, dan panahan untuk
+                menyalurkan minat bakat serta menjaga kebugaran jasmani seluruh
+                santri.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- CONTACT SECTION --- -->
+    <section
+      class="section-padding"
+      id="kontak"
+      style="background-color: var(--bg-secondary)"
+    >
+      <div class="container">
+        <div class="section-title-wrapper reveal-element">
+          <span class="section-subtitle">Hubungi Kami</span>
+          <h2 class="section-title">Lokasi & Kontak</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Details -->
+          <div class="contact-info-list reveal-element">
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Alamat Utama</h5>
+                <p>
+                  Jl. Raya Pesantren No. 12, Kel. Minhajul Haq, Kec. Mulia, Kota
+                  Bogor, Jawa Barat, 16120
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Telepon & Layanan WhatsApp</h5>
+                <p>
+                  +62 812-3456-7890 (Humas & PSB)<br />+62 821-9876-5432
+                  (Sekretariat)
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Surat Elektronik (Email)</h5>
+                <p>info@minhajulhaq.sch.id<br />psb@minhajulhaq.sch.id</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Jam Operasional Kantor</h5>
+                <p>
+                  Senin - Sabtu: 08.00 - 15.00 WIB (Kecuali hari libur nasional)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-wrapper reveal-element">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="contactName" class="form-label">Nama Lengkap</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  class="form-control"
+                  placeholder="Masukkan nama lengkap Anda..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail" class="form-label"
+                  >Alamat Email</label
+                >
+                <input
+                  type="email"
+                  id="contactEmail"
+                  class="form-control"
+                  placeholder="nama@email.com..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactPhone" class="form-label"
+                  >Nomor WhatsApp</label
+                >
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  class="form-control"
+                  placeholder="0812XXXXXXXX..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage" class="form-label"
+                  >Isi Pesan / Pertanyaan</label
+                >
+                <textarea
+                  id="contactMessage"
+                  class="form-control"
+                  placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                Kirim Pesan <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div class="alert-message" id="contactAlert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Column 1: Brand & Socials -->
+          <div class="footer-brand">
+            <a href="#beranda" class="logo" style="color: #fff">
+              <div class="logo-icon">
+                <i class="fa-solid fa-mosque"></i>
+              </div>
+              <div class="logo-text">
+                <span class="logo-name" style="color: #fff">Minhajul Haq</span>
+                <span class="logo-sub" style="color: #b5a4a0"
+                  >Pondok Pesantren</span
+                >
+              </div>
+            </a>
+            <p>
+              Lembaga pendidikan Islam berlandaskan pemahaman salafus shalih
+              untuk mempersiapkan generasi Qur'ani yang berakhlak mulia, berilmu
+              luas, dan tangguh.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-btn" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Tautan Pintas -->
+          <div>
+            <h4 class="footer-title">Tautan Pintas</h4>
+            <ul class="footer-links">
+              <li><a href="#beranda">Beranda</a></li>
+              <li><a href="#profil">Profil & Sambutan</a></li>
+              <li><a href="#program">Program Pendidikan</a></li>
+              <li><a href="#fasilitas">Sarana & Fasilitas</a></li>
+              <li><a href="#kontak">Kontak & Lokasi</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Informasi Pendidikan -->
+          <div>
+            <h4 class="footer-title">Pendidikan</h4>
+            <ul class="footer-links">
+              <li><a href="#program">Madrasah Tsanawiyah</a></li>
+              <li><a href="#program">Madrasah Aliyah</a></li>
+              <li><a href="#program">Tahfidzul Qur'an</a></li>
+              <li><a href="#program">Kajian Kitab Kuning</a></li>
+              <li><a href="#program">Ekstrakurikuler</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Informasi Hubungan -->
+          <div>
+            <h4 class="footer-title">Sekretariat PSB</h4>
+            <ul
+              class="footer-links"
+              style="color: #b5a4a0; font-size: 0.95rem; line-height: 1.8"
+            >
+              <li>
+                <i
+                  class="fa-solid fa-phone"
+                  style="color: var(--secondary); margin-right: 8px"
+                ></i>
+                Humas: 0812-3456-7890
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-envelope"
+                  style="color: var(--secondary); margin-right: 8px"
+                ></i>
+                psb@minhajulhaq.sch.id
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-location-dot"
+                  style="color: var(--secondary); margin-right: 8px"
+                ></i>
+                Kampus Bogor, Jawa Barat
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Bottom -->
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Pondok Pesantren Minhajul Haq. Hak Cipta Dilindungi
+            Undang-Undang.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- --- REGISTRATION MODAL BOX --- -->
+    <div class="modal" id="registerModal">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Pendaftaran Santri Baru</h4>
+          <p>
+            Silakan isi formulir singkat berikut untuk memulai pendaftaran
+            santri baru.
+          </p>
+          <button
+            class="modal-close"
+            id="closeRegisterModalBtn"
+            aria-label="Tutup Form"
+          >
+            &times;
+          </button>
+        </div>
+        <form id="registerForm" novalidate>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="regName" class="form-label">Nama Calon Santri</label>
+              <input
+                type="text"
+                id="regName"
+                class="form-control"
+                placeholder="Nama Lengkap Calon Santri..."
+                required
+              />
+            </div>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px"
+            >
+              <div class="form-group">
+                <label for="regBirthPlace" class="form-label"
+                  >Tempat Lahir</label
+                >
+                <input
+                  type="text"
+                  id="regBirthPlace"
+                  class="form-control"
+                  placeholder="Kota Lahir..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="regBirthDate" class="form-label"
+                  >Tanggal Lahir</label
+                >
+                <input
+                  type="date"
+                  id="regBirthDate"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px"
+            >
+              <div class="form-group">
+                <label for="regGender" class="form-label">Jenis Kelamin</label>
+                <select id="regGender" class="form-control" required>
+                  <option value="" disabled selected>
+                    Pilih Jenis Kelamin
+                  </option>
+                  <option value="Laki-laki">Laki-laki (Ikhwan)</option>
+                  <option value="Perempuan">Perempuan (Akhwat)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="regProgram" class="form-label"
+                  >Pilihan Program</label
+                >
+                <select id="regProgram" class="form-control" required>
+                  <option value="" disabled selected>
+                    Pilih Program Pendidikan
+                  </option>
+                  <option value="MTs">Madrasah Tsanawiyah (MTs)</option>
+                  <option value="MA">Madrasah Aliyah (MA)</option>
+                  <option value="Tahfidz">Tahfidz Al-Qur'an (Murni)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="regParent" class="form-label"
+                >Nama Orang Tua / Wali</label
+              >
+              <input
+                type="text"
+                id="regParent"
+                class="form-control"
+                placeholder="Nama Lengkap Orang Tua..."
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="regPhone" class="form-label"
+                >Nomor WhatsApp Aktif</label
+              >
+              <input
+                type="tel"
+                id="regPhone"
+                class="form-control"
+                placeholder="0812XXXXXXXX..."
+                required
+              />
+            </div>
+
+            <div class="alert-message" id="registerAlert"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline"
+              id="cancelRegisterModalBtn"
+              style="padding: 10px 20px"
+            >
+              Batal
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="padding: 10px 20px"
+            >
+              Kirim Formulir <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Custom JavaScript File -->
+    <script src="app.js"></script>
+  </body>
+</html>

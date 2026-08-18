@@ -1,42 +1,49 @@
 # Pertemuan 8: Flexbox Layouting (Navbar & Footer)
 
 ## 1. Tujuan Pembelajaran
+
 Setelah menyelesaikan materi pertemuan ini, peserta didik diharapkan mampu:
-* Memahami konsep dasar CSS *Flexible Box Layout* (Flexbox) untuk menata letak satu dimensi (baris atau kolom).
-* Menguasai properti penting kontainer Flexbox (`display: flex`, `justify-content`, `align-items`, `gap`, `flex-direction`).
-* Menerapkan tata letak responsif pada bagian Kepala Situs (Navbar Glassmorphism) dan Kaki Halaman (Footer) proyek website Pesantren Minhajul Haq.
+
+- Memahami konsep dasar CSS _Flexible Box Layout_ (Flexbox) untuk menata letak satu dimensi (baris atau kolom).
+- Menguasai properti penting kontainer Flexbox (`display: flex`, `justify-content`, `align-items`, `gap`, `flex-direction`).
+- Menerapkan tata letak responsif pada bagian Kepala Situs (Navbar Glassmorphism) dan Kaki Halaman (Footer) proyek website Pesantren Minhajul Haq.
 
 ---
 
 ## 2. Mengapa Memakai Flexbox?
-Sebelum Flexbox diperkenalkan, penataan letak horizontal (berdampingan) dilakukan dengan properti `float` atau `display: inline-block`. Metode-metode lama tersebut sangat sulit dikelola, sering memicu *layout breaking*, dan tidak otomatis menyesuaikan diri dengan ukuran layar.
+
+Sebelum Flexbox diperkenalkan, penataan letak horizontal (berdampingan) dilakukan dengan properti `float` atau `display: inline-block`. Metode-metode lama tersebut sangat sulit dikelola, sering memicu _layout breaking_, dan tidak otomatis menyesuaikan diri dengan ukuran layar.
 
 **Flexbox** adalah sistem tata letak modern yang dirancang untuk mendistribusikan ruang kosong di antara elemen anak secara cerdas dan fleksibel, baik secara horizontal maupun vertikal.
 
 ---
 
 ## 3. Konsep Sumbu & Properti Utama Flexbox
+
 Saat kita menuliskan `display: flex` pada kontainer induk, elemen-elemen anak di dalamnya akan langsung berubah menjadi **Flex Items** yang tersusun berdampingan dalam satu sumbu utama.
 
 ### A. Sumbu Utama (Main Axis & Cross Axis)
-* **Main Axis (Sumbu Utama)**: Arah horizontal (baris) secara bawaan.
-* **Cross Axis (Sumbu Silang)**: Arah tegak lurus (vertikal) secara bawaan.
+
+- **Main Axis (Sumbu Utama)**: Arah horizontal (baris) secara bawaan.
+- **Cross Axis (Sumbu Silang)**: Arah tegak lurus (vertikal) secara bawaan.
 
 ### B. Properti Induk Kontainer Flexbox
+
 1. **`justify-content`**: Mengatur penyejajaran elemen anak di sepanjang **Sumbu Utama (Main Axis)**.
-   * `flex-start`: Merapat ke kiri/awal.
-   * `flex-end`: Merapat ke kanan/akhir.
-   * `center`: Terpusat di tengah.
-   * `space-between`: Menyebar rata, dengan elemen pertama di ujung kiri dan elemen terakhir di ujung kanan (sangat ideal untuk Navbar).
+   - `flex-start`: Merapat ke kiri/awal.
+   - `flex-end`: Merapat ke kanan/akhir.
+   - `center`: Terpusat di tengah.
+   - `space-between`: Menyebar rata, dengan elemen pertama di ujung kiri dan elemen terakhir di ujung kanan (sangat ideal untuk Navbar).
 2. **`align-items`**: Mengatur penyejajaran elemen anak di sepanjang **Sumbu Silang (Cross Axis / Vertikal)**.
-   * `center`: Menyejajarkan bagian tengah elemen secara vertikal (sangat berguna agar teks logo dan menu sejajar lurus).
-   * `stretch`: Elemen meregang memenuhi tinggi kontainer.
+   - `center`: Menyejajarkan bagian tengah elemen secara vertikal (sangat berguna agar teks logo dan menu sejajar lurus).
+   - `stretch`: Elemen meregang memenuhi tinggi kontainer.
 3. **`gap`**: Menentukan jarak celah kosong antar elemen anak tanpa perlu memberikan margin satu-satu.
 4. **`flex-direction`**: Mengubah sumbu utama menjadi kolom (`column`) atau baris (`row`).
 
 ---
 
 ## 4. Bedah Progres Kode Proyek (Navbar & Footer)
+
 Mari kita perhatikan bagaimana Flexbox diterapkan untuk menata letak Navbar kepala situs secara elegan di berkas `style.css`:
 
 ```css
@@ -75,17 +82,19 @@ Mari kita perhatikan bagaimana Flexbox diterapkan untuk menata letak Navbar kepa
 ```
 
 ### C. Penataan Letak & Latar Belakang Section Hero (Flexbox & Gambar Background)
+
 Selain untuk Navbar dan Footer, Flexbox juga kita gunakan pada Section Hero (`.hero`) untuk menyejajarkan konten di tengah layar secara vertikal serta menerapkan latar belakang gambar yang memenuhi layar secara penuh:
+
 ```css
 .hero {
   position: relative;
-  min-height: 100vh;           /* Memenuhi tinggi layar secara penuh */
+  min-height: 100vh; /* Memenuhi tinggi layar secara penuh */
   display: flex;
-  align-items: center;         /* Menyejajarkan konten di tengah secara vertikal */
-  background-image: url("../hero.png"); /* Mengambil gambar latar dari direktori utama */
-  background-size: cover;      /* Gambar otomatis menutupi seluruh area hero */
+  align-items: center; /* Menyejajarkan konten di tengah secara vertikal */
+  background-image: url("../hero.webp"); /* Mengambil gambar latar dari direktori utama */
+  background-size: cover; /* Gambar otomatis menutupi seluruh area hero */
   background-position: center; /* Memastikan bagian tengah gambar tetap terlihat */
-  background-attachment: fixed;/* Efek gulir parallax statis */
+  background-attachment: fixed; /* Efek gulir parallax statis */
   padding-top: 100px;
 }
 ```
@@ -95,9 +104,10 @@ Selain untuk Navbar dan Footer, Flexbox juga kita gunakan pada Section Hero (`.h
 ## 5. Latihan Praktik Pertemuan 8 (Progres Berkas Proyek)
 
 ### Instruksi:
+
 1. Periksa berkas `index.html` dan `style.css` di dalam folder `pertemuan08/`.
 2. Jalankan `index.html` di browser Anda.
-   * **Amati**: Navbar atas sekarang melayang statis (*sticky header*) di bagian atas layar dengan latar belakang efek kaca buram (*glassmorphism*). Logo pesantren berada di sisi kiri dan daftar link menu berjejer rapi di sisi kanan dengan jarak renggang yang seimbang.
-   * Gulir halaman ke bawah, perhatikan bagaimana bagian-bagian section meluncur di bawah navbar kaca transparan tersebut.
-   * Lihat pula area Footer di bawah. Struktur link sudah tersusun menyebar rata menggunakan tata letak flexbox.
+   - **Amati**: Navbar atas sekarang melayang statis (_sticky header_) di bagian atas layar dengan latar belakang efek kaca buram (_glassmorphism_). Logo pesantren berada di sisi kiri dan daftar link menu berjejer rapi di sisi kanan dengan jarak renggang yang seimbang.
+   - Gulir halaman ke bawah, perhatikan bagaimana bagian-bagian section meluncur di bawah navbar kaca transparan tersebut.
+   - Lihat pula area Footer di bawah. Struktur link sudah tersusun menyebar rata menggunakan tata letak flexbox.
 3. **Tantangan Mandiri**: Di file `style.css` bagian Pertemuan 8, ubah properti `flex-direction` pada selektor `.footer-grid` (jika ada) atau buat selektor baru untuk `.social-links` agar tombol-tombol sosial media berjejer tegak ke bawah menjadi kolom menggunakan `flex-direction: column` dengan jarak `gap: 10px`.

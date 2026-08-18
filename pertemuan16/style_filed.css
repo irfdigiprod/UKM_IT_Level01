@@ -13,10 +13,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Model Box: Lebar total mencakup padding/border */
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  
+  font-family: "Plus Jakarta Sans", sans-serif;
+
   /* Transisi Halus Perpindahan Tema */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* ==========================================================================
@@ -24,23 +27,23 @@
    ========================================================================== */
 
 /* Impor Google Font: Plus Jakarta Sans */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 
 /* Deklarasi Variabel CSS Global - MODE TERANG (Default) */
 :root {
-  --primary: #602515;       /* Maroon */
+  --primary: #602515; /* Maroon */
   --primary-rgb: 96, 37, 21;
-  --secondary: #f8ae19;     /* Emas */
+  --secondary: #f8ae19; /* Emas */
   --secondary-rgb: 248, 174, 25;
-  --accent: #2e7d32;        /* Hijau Islami */
-  
-  --bg-primary: #fdfbf7;    /* Latar Krem Lembut */
-  --bg-secondary: #f4efea;  /* Latar Krem Gelap */
-  --bg-card: #ffffff;       /* Latar kartu putih */
-  
-  --text-primary: #2a1a16;  /* Teks utama cokelat-hitam pekat */
-  --text-secondary: #6e5650;/* Teks pendukung abu-cokelat */
-  
+  --accent: #2e7d32; /* Hijau Islami */
+
+  --bg-primary: #fdfbf7; /* Latar Krem Lembut */
+  --bg-secondary: #f4efea; /* Latar Krem Gelap */
+  --bg-card: #ffffff; /* Latar kartu putih */
+
+  --text-primary: #2a1a16; /* Teks utama cokelat-hitam pekat */
+  --text-secondary: #6e5650; /* Teks pendukung abu-cokelat */
+
   --border-color: rgba(96, 37, 21, 0.08);
   --shadow-sm: 0 2px 8px rgba(96, 37, 21, 0.04);
   --shadow-md: 0 10px 30px rgba(96, 37, 21, 0.06);
@@ -52,13 +55,13 @@
 
 /* Deklarasi Variabel CSS Global - MODE GELAP */
 [data-theme="dark"] {
-  --bg-primary: #120907;    /* Latar Cokelat Gelap Pekat */
-  --bg-secondary: #1a0e0b;  /* Latar Cokelat Gelap Medium */
-  --bg-card: #1f120e;       /* Latar kartu cokelat gelap */
-  
-  --text-primary: #fdfbf7;  /* Teks utama menjadi krem lembut */
-  --text-secondary: #cbbab6;/* Teks pendukung abu-abu terang */
-  
+  --bg-primary: #120907; /* Latar Cokelat Gelap Pekat */
+  --bg-secondary: #1a0e0b; /* Latar Cokelat Gelap Medium */
+  --bg-card: #1f120e; /* Latar kartu cokelat gelap */
+
+  --text-primary: #fdfbf7; /* Teks utama menjadi krem lembut */
+  --text-secondary: #cbbab6; /* Teks pendukung abu-abu terang */
+
   --border-color: rgba(248, 174, 25, 0.15); /* Border emas transparan */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -87,7 +90,7 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -141,7 +144,6 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* ==========================================================================
    MATERI PERTEMUAN 7: CSS BOX MODEL & BUTTON STYLING
@@ -218,7 +220,7 @@ p {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 4px;
@@ -226,7 +228,6 @@ p {
   margin: 15px auto 0;
   border-radius: 2px;
 }
-
 
 /* ==========================================================================
    MATERI PERTEMUAN 8: FLEXBOX LAYOUTING (NAVBAR & FOOTER)
@@ -331,7 +332,7 @@ p {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -408,7 +409,7 @@ p {
 }
 
 .footer-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 30px;
   height: 2px;
@@ -449,7 +450,6 @@ p {
   color: #8c7873;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 9: GRID LAYOUTING (CARD PROGRAM & FASILITAS)
    ========================================================================== */
@@ -469,7 +469,11 @@ p {
   border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .program-card:hover {
@@ -561,7 +565,11 @@ p {
 
 .facility-img-placeholder {
   height: 200px;
-  background: linear-gradient(135deg, rgba(96, 37, 21, 0.1) 0%, rgba(248, 174, 25, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(96, 37, 21, 0.1) 0%,
+    rgba(248, 174, 25, 0.1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -586,7 +594,7 @@ p {
 }
 
 .facility-img-placeholder::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -610,7 +618,6 @@ p {
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
-
 
 /* ==========================================================================
    MATERI PERTEMUAN 10: CSS VARIABLES & PENERAPAN MODE GELAP/TERANG
@@ -655,7 +662,6 @@ p {
   display: block;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 11: ANIMASI TRANSISI & TRANSFORMASI CSS
    ========================================================================== */
@@ -678,14 +684,15 @@ p {
 .reveal-element {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .reveal-element.active {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* ==========================================================================
    MATERI PERTEMUAN 13: JAVASCRIPT EVENT HANDLING & NAVIGASI MOBILE
@@ -728,7 +735,6 @@ p {
   }
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 14: LOGIKA TAB FILTER PROGRAM PENDIDIKAN
    ========================================================================== */
@@ -765,7 +771,6 @@ p {
   color: #120907;
   border-color: var(--secondary);
 }
-
 
 /* ==========================================================================
    MATERI PERTEMUAN 15: PEMBUATAN POPUP MODAL BOX PENDAFTARAN
@@ -897,7 +902,6 @@ p {
   gap: 15px;
 }
 
-
 /* ==========================================================================
    MATERI PERTEMUAN 16: JAVASCRIPT FORM VALIDATION & INTEGRASI AKHIR
    ========================================================================== */
@@ -990,7 +994,7 @@ p {
   display: flex;
   align-items: center;
   /* Gambar diload kustom dari folder proyek */
-  background-image: url('hero.png');
+  background-image: url("../hero.webp");
   background-size: cover;
   background-position: center;
   padding-top: 100px;

@@ -338,7 +338,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../hero.png");
+  background-image: url("../hero.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
